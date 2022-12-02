@@ -52,11 +52,13 @@
                     <% }); %>
                     <% } else { %>
                     <li class="slide" data-active>
-                        <button id="new-area">
+                    <form action="/config" method="POST">
+                        <button type="submit" id="new-area" name="area_id" value="0">
                             <div id="area-info">
                                 <h1>Criar Nova Área</h1>
                             </div>
                         </button>
+                    </form>
                     </li>
                     <% } %>
                     <% if (areas.length < 2) { %> 

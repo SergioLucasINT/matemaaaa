@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 // Routes
 const userCred = require('./tools/routes/userCred.js');
 const editAreas = require('./tools/routes/editAreas.js');
+const configSteps = require('./tools/routes/configSteps.js');
 
 
 const port = 3000;
@@ -28,3 +29,6 @@ app.use('/users/auth', userCred);
 
 // Edit page
 app.use('/edit', editAreas);
+
+// Steps page 
+app.use('/config', configSteps);

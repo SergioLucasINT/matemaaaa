@@ -18,11 +18,11 @@ router.get('/', (req, res) => {
 
   var db = new sqlite3.Database(DBPATH);
 
-  db.all(functions.readNode(query_data['table'], '*'), [],  (err, areas ) => {
+  	db.all(functions.readNode(query_data['table'], '*'), [],  (err, areas ) => {
 		if (err) {
 		    throw err;
 		}
-    res.render('pages/edit', {areas: areas});
+    	res.render('pages/edit', {areas: areas});
 	});
 
 	db.close();
@@ -48,4 +48,6 @@ router.get('/areas', (req, res) => {
 	db.close();
 
 });
+
+
 module.exports = router;
